@@ -1,10 +1,11 @@
 import '../styles/globals.css'
+import { WishlistContextProvider } from '../context/wishlist';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div suppressHydrationWarning >
-      {typeof window !== 'undefined' && <Component {...pageProps} />}
-    </div>
+    <WishlistContextProvider>
+      <Component {...pageProps} />
+    </WishlistContextProvider>
   );
 }
 

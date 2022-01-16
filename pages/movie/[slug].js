@@ -5,7 +5,6 @@ import Detail from '../../components/Detail';
 
 export default function DetailMovie(props) {
   const { movie } = props;
-  console.log(movie);
   return (
     <div>
       <Head>
@@ -26,7 +25,6 @@ export default function DetailMovie(props) {
 export async function getServerSideProps(context) {
   const { query } = context;
   const id = query?.slug;
-  console.log(id);
 
   const movieResp = await axios.get(`https://www.omdbapi.com/?apikey=ce92ed13&i=${id}`)
     .catch(err => {
