@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styled from 'styled-components'
 
-const Section = styled.div.attrs(() => ({
+const Section = styled.a.attrs(() => ({
   className: `flex flex-col rounded-md shadow-md space-y-4 p-2 cursor-pointer`
 }))``;
 
@@ -26,14 +26,14 @@ export default function Card(props) {
   const { movie } = props;
   const PlaceholderImage =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNs/Q4AAgcBfrwSE/wAAAAASUVORK5CYII=';
-  console.log(movie);
   const poster = movie?.Poster === "N/A" ? PlaceholderImage : movie?.Poster;
   const title = movie?.Title;
   const type = movie?.Type;
   const year = movie?.Year;
+  const href = `/movie/${movie?.imdbID}`;
 
   return (
-    <Section>
+    <Section href={href}>
       <ImageContainer>
         <Image
           src={poster}

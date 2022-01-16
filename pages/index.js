@@ -7,6 +7,7 @@ import Pagination from '../components/Pagination';
 export default function App(props) {
   const { movies, currentPage } = props;
   const totalResults = movies?.totalResults;
+  console.log(totalResults);
   return (
     <div>
       <Head>
