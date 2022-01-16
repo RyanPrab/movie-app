@@ -28,12 +28,12 @@ export default function MyList(props) {
     return () => {
       setPageCount(0);
     }
-  });
+  }), [wishlist];
 
   useEffect(() => {
     setLimit(itemsPerPage * page);
     setOffset(limit - itemsPerPage);
-  }), [page];
+  }), [page, limit];
 
   const pageNumber = new Array(pageCount).fill(' ');
 
