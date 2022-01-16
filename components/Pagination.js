@@ -13,7 +13,7 @@ const PaginationWrapper = styled.div.attrs(() => ({
 }))``;
 
 const PageCounter = styled.div.attrs((props) => ({
-  className: `text-xs text-gray-500 rounded-lg border-2 shadow-md p-1 w-8 text-center cursor-pointer ${props.active && 'text-primary border-primary'}`
+  className: `text-xs text-gray-500 rounded-lg border-2 shadow-md p-1 w-8 text-center cursor-pointer ${props.active && 'text-blue-500 border-blue-500'}`
 }))``;
 
 const PaginationItem = React.forwardRef((props, ref) => {

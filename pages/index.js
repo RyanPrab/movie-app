@@ -17,12 +17,12 @@ export default function App(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col items-center flex-1 flex-shrink-0 justify-center space-y-4 pt-10">
+      <div className="flex flex-col items-center flex-1 flex-shrink-0 justify-center space-y-4">
         <div className='text-xl font-bold'>
           Movie List
         </div>
         <List
-          movies={movies}
+          movies={movies?.Search}
         />
         <Pagination
           currentPage={currentPage}

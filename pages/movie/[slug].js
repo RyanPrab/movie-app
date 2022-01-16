@@ -14,7 +14,7 @@ export default function DetailMovie(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col items-center flex-1 flex-shrink-0 justify-center space-y-4 pt-10">
+      <div className="flex flex-col items-center flex-1 flex-shrink-0 justify-center space-y-4">
         <Detail
           movie={movie}
         />

@@ -17,7 +17,7 @@ export default function List(props) {
     <Section>
       <Content>
         {
-          movies?.Search?.map((movie, index) => {
+          movies?.map((movie, index) => {
             return (
               <Card
                 key={index}
