@@ -27,7 +27,7 @@ const SubInfo = styled.div.attrs(() => ({
 }))``;
 
 const Plot = styled.div.attrs(() => ({
-  className: `text-sm`
+  className: `text-sm leading-normal text-justify`
 }))``;
 
 export default function Detail(props) {
@@ -35,12 +35,11 @@ export default function Detail(props) {
   const PlaceholderImage =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNs/Q4AAgcBfrwSE/wAAAAASUVORK5CYII=';
   const poster = movie?.Poster === "N/A" ? PlaceholderImage : movie?.Poster;
-  console.log(movie);
   return (
     <Section>
       <ImageContainer>
         <Image
-          src={movie?.Poster}
+          src={poster}
           alt={movie?.Title}
           layout="fill"
         />
