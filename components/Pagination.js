@@ -24,8 +24,9 @@ const PaginationItem = React.forwardRef((props, ref) => {
     </PageCounter>
   );
 });
+PaginationItem.displayName = "Pagination Item";
 
-const Pagination = props => {
+export default function Pagination(props) {
   const { currentPage, totalPages, currentPath } = props;
   const router = useRouter();
   const { slug, ...availableQuery } = router?.query;
@@ -92,5 +93,3 @@ const Pagination = props => {
     </div>
   );
 };
-
-export default Pagination;
